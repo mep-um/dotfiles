@@ -13,6 +13,18 @@
 	st = status
 	s = status -s
 	lg = log --oneline --decorate --all --graph
+	# Rebase current branch against develop
+    	frb = "!f() { \
+        	BRANCH=`git rev-parse --abbrev-ref HEAD` && \
+        	git checkout develop && \
+        	git pull --rebase=preserve && \
+        	git checkout \"$BRANCH\" && \
+        	git pull --rebase=preserve && \
+        	git merge develop && \
+        	git push origin \"$BRANCH\" && \
+        	git rebase -i develop --preserve-merges && \
+        	git push --force origin \"$BRANCH\"; \
+    	}; f"
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = input
