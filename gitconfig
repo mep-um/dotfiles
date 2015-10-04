@@ -11,6 +11,8 @@
 	ci = commit -v
 	co = checkout
 	st = status
+	s = status -s
+	lg = log --oneline --decorate --all --graph
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = input
@@ -24,3 +26,5 @@
 	autosquash = true
 [include]
 	path = ~/.gitconfig.local
+[pull]
+	rebase = true
