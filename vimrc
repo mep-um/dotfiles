@@ -141,10 +141,10 @@ nmap <leader>so :source $MYVIMRC<cr>
 " Pre-populate a split command with the current directory
 nmap <leader>v :vnew <C-r>=escape(expand("%:p:h"), ' ') . '/'<cr>
 
-" Plugins
-call plug#begin()
-Plug 'tpope/vim-sensible'
-call plug#end()
+" Plugin configs
+if filereadable(expand("~/.vimrc.plugged"))
+    source ~/.vimrc.plugged
+endif
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
