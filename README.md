@@ -1,7 +1,11 @@
 meppum dotfiles
 ===================
 
-The installation an management of these dotfiles were inspired by the [thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles)
+These dotfiles come packaged with [Vim
+Plug](https://github.com/junegunn/vim-plug), which will auto install on the
+first execution of Vim.
+
+The installation an management of these dotfiles were inspired by the [thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles).
 
 Requirements
 ------------
