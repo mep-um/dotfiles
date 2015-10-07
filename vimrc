@@ -12,10 +12,6 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-endif
-
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
@@ -144,6 +140,11 @@ nmap <leader>so :source $MYVIMRC<cr>
 
 " Pre-populate a split command with the current directory
 nmap <leader>v :vnew <C-r>=escape(expand("%:p:h"), ' ') . '/'<cr>
+
+" Plugins
+call plug#begin()
+Plug 'tpope/vim-sensible'
+call plug#end()
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
