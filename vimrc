@@ -1,4 +1,4 @@
-" leader
+" Leader
 let mapleader = "\<Space>"
 
 set nobackup
@@ -111,7 +111,7 @@ let g:html_indent_tags = 'li\|p'
 set splitbelow
 set splitright
 
-" configure syntastic syntax checking to check on open as well as save
+" Configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 let g:syntastic_eruby_ruby_quiet_messages =
@@ -132,7 +132,7 @@ nnoremap 1 ^
 nmap <C-s> :w<cr>
 imap <C-s> <esc>:w<cr>
 
-"Split edit your vimrc. Type space, v, r in sequence to trigger
+" Split edit your vimrc. Type space, v, r in sequence to trigger
 nmap <leader>vr :sp $MYVIMRC<cr>
 
 " Source (reload) your vimrc. Type space, s, o in sequence to trigger
@@ -140,6 +140,13 @@ nmap <leader>so :source $MYVIMRC<cr>
 
 " Pre-populate a split command with the current directory
 nmap <leader>v :vnew <C-r>=escape(expand("%:p:h"), ' ') . '/'<cr>
+
+" Automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" Zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
 
 " Plugin configs
 if filereadable(expand("~/.vimrc.plugged"))
