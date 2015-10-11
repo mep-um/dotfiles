@@ -8,6 +8,7 @@ endif
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 " Local config

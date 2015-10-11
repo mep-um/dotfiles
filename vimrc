@@ -69,6 +69,10 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" Remap ctrlP commdand
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = 'ctrlP'
+
 " Make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+1
