@@ -69,6 +69,10 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" bind \ (backward slash) to grep shortcut
+" command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap \ :Ag<SPACE>
+
 " Remap ctrlP commdand
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_map = 'ctrlP'
@@ -151,6 +155,19 @@ autocmd VimResized * :wincmd =
 " Zoom a vim pane, <C-w>= to re-balance
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
+
+" vim.sensible configs
+filetype plugin indent on
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Plugin configs
 if filereadable(expand("~/.vimrc.plugged"))
