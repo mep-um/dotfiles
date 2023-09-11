@@ -32,6 +32,7 @@
 	ff = only
 [commit]
 	template = ~/.gitmessage
+	verbose = true
 [fetch]
 	prune = true
 [rebase]
@@ -40,3 +41,6 @@
 	path = ~/.gitconfig.local
 [pull]
 	rebase = true
+[user]
+	name = mep-um
+	email = 3371600+mep-um@users.noreply.github.com
