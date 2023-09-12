@@ -19,10 +19,6 @@ brew install wget
 echo "Installing Python environment..."
 brew install python
 brew install pip
-pip install --user pipenv
-pip install virtualenv
-pip install virtualenvwrapper
-brew install direnv
 
 # git
 echo "Installing git..."
