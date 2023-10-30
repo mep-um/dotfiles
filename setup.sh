@@ -20,6 +20,9 @@ echo "Installing Python environment..."
 brew install python
 brew install pip
 
+# Development tools
+brew install sqlite
+
 # git
 echo "Installing git..."
 brew install git
