@@ -78,7 +78,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
 git
 iterm2
-zsh-autosuggestions
 )
 
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
@@ -121,3 +120,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/development
+
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
