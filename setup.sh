@@ -24,6 +24,11 @@ brew install wget
 # Python
 echo "Installing Python environment..."
 brew install python
+brew install uv
+
+# Node
+echo "Installing Node environment..."
+brew install node
 
 # Development tools
 echo "Installing development tools..."
